@@ -2,9 +2,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv'); // Optional, if you're using .env file
-
+const connectDB = require('./db');
 // Load environment variables from .env file
 dotenv.config();
+//connect to mongoose
+connectDB();
 
 // Create Express application
 const app = express();
