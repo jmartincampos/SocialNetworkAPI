@@ -1,14 +1,15 @@
 {
   "name": "socialnetworkapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "A RESTful API for a social media application built with Node.js, Express, and MongoDB.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
     "mongoose": "^8.3.2"
