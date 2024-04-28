@@ -1,15 +1,15 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const { User, Thought, Reaction } = require('./models');
+import express, { json } from 'express';
+import { connect } from 'mongoose';
+import { User, Thought, Reaction } from './models';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.json());
+app.use(json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost/social-media-db', {
+connect('mongodb://localhost/social-media-db', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -26,4 +26,4 @@ app.listen(PORT, async () => {
   await Thought.syncIndexes();
 });
 
-module.exports = app;
+export default app;
