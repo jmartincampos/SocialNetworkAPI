@@ -1,6 +1,7 @@
-import express, { json } from 'express';
-import { connect } from 'mongoose';
-import { User, Thought, Reaction } from './models';
+const express = require('express');
+const { json } = require('express');
+const { connect } = require('mongoose');
+const { User, Thought, Reaction } = require('./models');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,4 +27,4 @@ app.listen(PORT, async () => {
   await Thought.syncIndexes();
 });
 
-export default app;
+module.exports = app;
