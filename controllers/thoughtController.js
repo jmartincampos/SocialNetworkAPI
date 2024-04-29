@@ -1,4 +1,4 @@
-const { Thought, User } = require('/Users/jonathancampos/Desktop/SocialNetworkAPI/models');
+const { Thought, User } = require('./models');
 
 const thoughtController = {
   createThought: async (req, res) => {
