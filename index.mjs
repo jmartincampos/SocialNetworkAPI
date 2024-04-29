@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.use(json());
 
 // MongoDB connection
-connect('mongodb://localhost/social-media-db', {
+connect('mongodb://localhost:3000', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
